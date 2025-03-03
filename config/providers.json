@@ -1,0 +1,46 @@
+[
+    {
+      "id": "anthropic-claude-3-5-sonnet",
+      "name": "Anthropic Claude 3.5 Sonnet",
+      "description": "A balanced model for reasoning, coding, and creative tasks",
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet",
+      "default_parameters": {
+        "temperature": 0.7,
+        "max_tokens": 1000
+      }
+    },
+    {
+      "id": "anthropic-claude-3-haiku",
+      "name": "Anthropic Claude 3 Haiku",
+      "description": "Fast, efficient model for simpler tasks",
+      "provider": "anthropic",
+      "model": "claude-3-haiku",
+      "default_parameters": {
+        "temperature": 0.7,
+        "max_tokens": 1000
+      }
+    },
+    {
+      "id": "openai-gpt-4o",
+      "name": "OpenAI GPT-4o",
+      "description": "Advanced reasoning and general knowledge capabilities",
+      "provider": "openai",
+      "model": "gpt-4o",
+      "default_parameters": {
+        "temperature": 0.7,
+        "max_tokens": 1000
+      }
+    },
+    {
+      "id": "openai-gpt-3-5-turbo",
+      "name": "OpenAI GPT-3.5 Turbo",
+      "description": "Fast and efficient for standard tasks",
+      "provider": "openai",
+      "model": "gpt-3.5-turbo",
+      "default_parameters": {
+        "temperature": 0.7,
+        "max_tokens": 1000
+      }
+    }
+  ]
