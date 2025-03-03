@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal LLM Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Personal LLM Hub</h1>
+        </header>
+        
+        <div class="config-selectors">
+            <div class="selector-group">
+                <label for="provider-select">LLM Provider:</label>
+                <select id="provider-select">
+                    <option value="" disabled selected>Select a provider</option>
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+                <div class="description" id="provider-description"></div>
+            </div>
+            
+            <div class="selector-group">
+                <label for="instruction-select">Instruction Set:</label>
+                <select id="instruction-select">
+                    <option value="" disabled selected>Select instructions</option>
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+                <div class="description" id="instruction-description"></div>
+            </div>
+        </div>
+        
+        <div class="chat-container">
+            <div id="chat-messages" class="chat-messages">
+                <!-- Messages will appear here -->
+                <div class="message system-message">
+                    Select a provider and instruction set to begin chatting.
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <textarea id="user-input" placeholder="Type your message here..." rows="3"></textarea>
+                <button id="send-button" disabled>Send</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
