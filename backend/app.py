@@ -54,21 +54,21 @@ def load_instructions() -> List[Dict[str, Any]]:
         return []
 
 # Routes
-@app.get("/")
+@app.get("/api")
 async def read_root():
     return {"status": "API is running"}
 
-@app.get("/providers")
+@app.get("/api/providers")
 async def get_providers():
     """Return list of available LLM providers"""
     return load_providers()
 
-@app.get("/instructions")
+@app.get("/api/instructions")
 async def get_instructions():
     """Return list of available instruction sets"""
     return load_instructions()
 
-@app.post("/chat", response_model=ChatResponse)
+@app.post("/api/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
     """Process a chat message and return the response"""
     try:
@@ -119,7 +119,8 @@ async def chat(request: ChatRequest):
         print(f"Error processing chat request: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-# Mount static files for frontend
+# Mount static files for frontend - do this before the API routes for proper order
+from fastapi.staticfiles import StaticFiles
 app.mount("/", StaticFiles(directory="../frontend", html=True), name="frontend")
 
 if __name__ == "__main__":

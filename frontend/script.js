@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let conversationId = null;
     
     // API base URL - adjust for production
-    const API_BASE_URL = 'http://localhost:8000';
+    const API_BASE_URL = 'http://localhost:8000/api';
     
     // Load available providers and instructions
     async function loadConfigurations() {
